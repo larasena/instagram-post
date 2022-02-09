@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Instagram Post</title>
+</head>
+<body>
+  <div class="card">
+    <div class="top">
+      <div class="userDetails">
+        <div class="profile_img">
+          <img class="cover" src="img/logo.jpg" alt="logo">
+        </div>
+        <h3>online_tutorials<br><span>Patna, India</span></h3>
+      </div>
+      <div>
+        <img class="dot" src="img/dot.png">
+      </div>
+    </div>
+    <div class="imgBx">
+      <img class="cover" src="img/bg.jpg" alt="background">
+    </div>
+    <div class="actionBtns">
+      <div class="left">
+        <img class="heart" src="img/heart.png" onclick="likeButton()">
+        <img src="img/comment.png" alt="comment">
+        <img src="img/share.png" alt="share">
+      </div>
+      <div class="right">
+        <img src="img/bookmark.png" alt="">
+      </div>
+    </div>
+    <h4 class="likes">3,684 likes</h4>
+    <h4 class="message"><b>online_tutorials</b> Thanks for your love and supports <span>#cards</span> <span>#html</span> <span>#css</span></h4>
+    <h4 class="comments">View all 245 comments</h4>
+    <div class="addComments">
+      <div class="userImg">
+        <img class="cover" src="img/user.jpg" alt="user">
+      </div>
+      <input type="text" class="text" placeholder="Add a comment...">
+    </div>
+    <h5 class="postTime">4 hours ago</h5>
+  </div>
+
+  <script>
+
+    function likeButton() {
+      let heart = document.querySelector('.heart');
+      let likes = document.querySelector('.likes');
+      if(heart.src.match("img/heart.png")){
+        heart.src = "img/heart_red.png";
+        likes.innerHTML = "3,685 likes"
+      } else {
+        heart.src = "img/heart.png";
+        likes.innerHTML = "3,684 likes"
+      }
+    }
+
+  </script>
+</body>
+</html>
